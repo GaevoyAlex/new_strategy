@@ -1,0 +1,30 @@
+[default]
+SECRET_KEY = "django-insecure-change-me-in-production"
+DEBUG = true
+ALLOWED_HOSTS = ["*"]
+
+CORS_ALLOW_ALL_ORIGINS = true
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:3000",
+    "http://127.0.0.1:3000",
+    "http://localhost:8080",
+    "http://127.0.0.1:8080",
+    "http://172.23.160.1:3000",
+]
+
+CLAUDE_MODEL = "claude-sonnet-4-20250514"
+BINANCE_BASE_URL = "https://api.binance.com"
+BINANCE_RATE_LIMIT = 1200
+DEFAULT_KLINES_LIMIT = 100
+SUPPORTED_TIMEFRAMES = ["1h", "4h", "1d"]
+SUPPORTED_METHODS = ["elliott_wave", "volume_cluster", "smart_money"]
+
+[production]
+DEBUG = false
+ALLOWED_HOSTS = ["*"]
+CORS_ALLOW_ALL_ORIGINS = true
+
+[development]
+DEBUG = true
+ALLOWED_HOSTS = ["*"]
+CORS_ALLOW_ALL_ORIGINS = true
